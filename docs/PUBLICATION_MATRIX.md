@@ -29,7 +29,7 @@ This classification is based on the supplied project documents and images.
 
 | Item | Reason |
 |---|---|
-| `Robot_ODA_v4.0.txt` | Contains default credentials, example private-network addresses, detailed deployment paths, exact safety/calibration values, wiring/pin mappings, and internal operational procedures |
+| Private implementation notes | May contain default credentials, example private-network addresses, detailed deployment paths, exact safety/calibration values, wiring/pin mappings, and internal operational procedures |
 | Real `.env` files | Credentials and deployment configuration |
 | Real Zenoh/Tailscale/VPN configurations | Private endpoints, peer information, and network topology |
 | Private firmware and safety calibration | Proprietary and safety-critical implementation details |
@@ -42,5 +42,5 @@ This classification is based on the supplied project documents and images.
 
 Maintain two repositories:
 
-1. **Public portfolio repository** — sanitized architecture, selected code modules, tests, diagrams, demo video, and verified results.
-2. **Private implementation repository** — full source, firmware, deployment, calibration, maps, datasets, safety parameters, and operational procedures.
+1. **Public portfolio repository** - sanitized architecture, selected code modules, tests, diagrams, demo video, and verified results.
+2. **Private implementation repository** - full source, firmware, deployment, calibration, maps, datasets, safety parameters, and operational procedures.
