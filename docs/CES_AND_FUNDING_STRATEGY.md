@@ -2,9 +2,11 @@
 
 ## Positioning
 
-Ultron UV should be positioned as a healthcare robotics and AIoT platform, not only as a UV lamp on wheels. The strongest message is:
+Ultron UV should be positioned as a **local medical robotics platform + a Bangladesh-built hospital AI**, not only as a UV lamp on wheels. The strongest message is:
 
-> Low-cost autonomous infection-control robotics, built for resource-constrained healthcare systems.
+> A locally manufacturable, serviceable medical robotics platform — starting with autonomous UV-C disinfection — and an AI built on Bangladesh's own hospital data, designed for resource-constrained healthcare systems.
+
+This positioning matters because CES rewards **platform stories with a data moat**, not single-function gadgets. The [live admin dashboard](https://supersonic654e-byte.github.io/Ultron-WebApp-Admin-dashboard/#/home) is the visible proof that the data-collection flywheel already exists.
 
 ## CES 2027 readiness gap
 
@@ -16,7 +18,8 @@ CES and startup-style exhibitions reward products that are demo-ready, clear to 
 | Reliability | Repeatable navigation trials with success rate, failure cases, and fixes |
 | Efficacy | UV-C dose model, controlled surface test plan, and qualified reviewer input |
 | Market | Clear buyer, estimated cost, maintenance model, and deployment workflow |
-| Story | One-page product brief, demo video, photocard, GitHub repository, and follow-up deck |
+| Story | One-page product brief, demo video, photocard, GitHub repository, **live dashboard demo**, and follow-up deck |
+| Data/AI | A visible data-collection surface (the admin dashboard) and a credible AI roadmap on local hospital data |
 
 ## BEAR Summit strategy
 
@@ -44,11 +47,13 @@ This project has a plausible funding path if it is framed as applied healthcare 
 
 - One-page project brief.
 - 30-second and 2-minute pitch.
-- Clear prototype photos.
+- Clear prototype photos (see the [gallery](../README.md#prototype-gallery)).
+- **Live admin dashboard** and operator-dashboard screenshot (see [Live Demos](LIVE_DEMOS.md)).
 - Safety and limitations page.
 - Test matrix with real trial results.
 - Estimated bill of materials.
 - Pilot plan with timeline, risk controls, and expected outputs.
+- The [AI roadmap](AI_ARCHITECTURE.md) and how local data becomes a defensible asset.
 - Specific funding ask and use of funds.
 
 ## 90-day plan after BEAR Summit

@@ -2,19 +2,20 @@
 
 ## 30-second elevator pitch
 
-Hospital corridors and isolation areas need frequent disinfection, but manual cleaning exposes staff and is hard to repeat consistently during outbreaks. Ultron UV is a low-cost autonomous UV-C disinfection robot for healthcare environments. It uses ROS 2 navigation, LiDAR/depth sensing, obstacle avoidance, and human-safety shutdown so disinfection can happen under supervision with less direct exposure. Our focus is not just a demo robot, but a locally maintainable infection-control platform that Bangladesh can pilot, improve, and eventually export.
+We are not building only one robot — we are building a **local medical robotics platform for Bangladesh**, and starting an **AI journey on our own hospital data**. Ultron UV is our first version: a low-cost autonomous UV-C disinfection robot. Later versions add logistics, patient monitoring, and clinical decision support, all feeding a made-in-Bangladesh AI. The robot is built to be manufactured, serviced, and improved locally. Our goal this year is BEAR Summit; our target next year is CES 2027.
 
 ## 10-second version
 
-Ultron UV is a low-cost autonomous UV-C robot that helps hospitals disinfect high-risk indoor areas more often while reducing direct staff exposure.
+Ultron UV is a low-cost autonomous UV-C robot that helps hospitals disinfect high-risk areas more often — and it's the first step toward a Bangladeshi medical robotics platform and a locally-built hospital AI.
 
 ## What to show first
 
-1. Start with the real prototype photo or the physical robot, not slides.
-2. State the problem in one sentence.
-3. Demonstrate navigation or safety logic before explaining components.
-4. Be explicit about current status: prototype, not certified medical device.
-5. End every serious conversation with a specific ask: mentor, pilot site, safety reviewer, grant lead, or investor follow-up.
+1. Start with the **physical robot** (or the [gallery](../README.md#prototype-gallery)), not slides.
+2. State the problem in one sentence (nurse shortage, infection risk, expensive imports).
+3. Open the **[live admin dashboard](https://supersonic654e-byte.github.io/Ultron-WebApp-Admin-dashboard/#/home)** to prove there's a real data platform behind the robot.
+4. Explain the **4-version roadmap** and where the **AI** fits (collect → pattern → predict).
+5. Be explicit about current status: prototype, not certified medical device.
+6. End every serious conversation with a specific ask: mentor, pilot site, safety reviewer, grant lead, or investor follow-up.
 
 ## Judge and visitor questions
 
@@ -24,8 +25,9 @@ Ultron UV is a low-cost autonomous UV-C robot that helps hospitals disinfect hig
 | Why not manual cleaning? | Manual cleaning remains necessary, but robots can add more frequent, consistent, supervised disinfection cycles. |
 | Is UV-C safe? | UV-C is hazardous. Our design requires human detection, interlocks, emergency stop, controlled access, and qualified validation before real deployment. |
 | Is this clinically proven? | Not yet. This is a research prototype. We are preparing controlled validation and will not claim clinical efficacy before testing. |
-| What is different? | Local affordability, modular serviceability, ROS 2 autonomy, and safety-first deployment for Bangladeshi healthcare constraints. |
+| What is different? | Local affordability, modular serviceability, ROS 2 autonomy, a **live data platform**, and a **made-in-Bangladesh AI roadmap** — designed for Bangladeshi healthcare constraints. |
 | Who pays? | Hospitals, diagnostic centers, government/public-health programs, and service contractors that need repeatable disinfection capacity. |
+| What about AI? | Same pattern as Tesla/Netflix: collect data → find patterns → predict. V1 already logs disinfection data; V4 will predict outbreak risk. See [AI Architecture](AI_ARCHITECTURE.md). |
 | What is your next milestone? | Demonstrate reliable supervised navigation, publish repeatable safety tests, and secure a controlled pilot environment. |
 | What support do you need? | Healthcare workflow mentors, UV-C safety reviewers, pilot spaces, robotics reliability advice, and prototype funding. |
 

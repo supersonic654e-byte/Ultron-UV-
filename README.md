@@ -2,86 +2,183 @@
 
 # Ultron UV
 
-### Low-cost autonomous UV-C disinfection robotics for safer healthcare environments
+### A Bangladeshi medical robotics platform — starting with autonomous UV-C disinfection
 
-**Team Ultron UV | University of Asia Pacific | Robotics + AIoT**
+**Team Ultron UV · University of Asia Pacific · Robotics + AIoT**
+**Exhibiting at BEAR Summit 2026 → aiming for CES 2027**
 
 [![ROS 2](https://img.shields.io/badge/ROS%202-Humble-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
+[![Platform](https://img.shields.io/badge/platform-local%20medical%20robotics-0B5CAD)](#our-long-term-goal)
+[![AI](https://img.shields.io/badge/AI-Bangladesh's%20own%20hospital%20data-2E7D32)](docs/AI_ARCHITECTURE.md)
+[![Live Demo](https://img.shields.io/badge/demo-admin%20dashboard%20live-FF6F00)](https://supersonic654e-byte.github.io/Ultron-WebApp-Admin-dashboard/#/home)
 [![Status](https://img.shields.io/badge/status-research%20prototype-orange)](#project-status)
 [![Medical Use](https://img.shields.io/badge/medical%20use-not%20validated-critical)](#safety-notice)
-[![BEAR Summit](https://img.shields.io/badge/BEAR%20Summit-2026-0B5CAD)](https://bear-summit-2026.vercel.app/)
 
-<img src="docs/assets/dual-prototype-platforms.jpg" alt="Ultron UV prototype platforms" width="900" />
+<img src="docs/assets/gallery/robot-v2-front-right.jpeg" alt="Ultron UV Version-2 autonomous prototype" width="860" />
 
-*A UV-C tower platform and autonomous sensing/navigation prototype shown together during development.*
+*The Ultron UV Version-2 autonomous prototype — depth camera, LiDAR, embedded safety control, and a modular UVC payload, built to be serviced locally.*
 
 </div>
 
 ---
 
-## One-line Summary
+## Read this in 30 seconds
 
-Ultron UV is a research prototype for an autonomous hospital disinfection robot that combines ROS 2 navigation, LiDAR/depth sensing, embedded safety control, and UV-C disinfection hardware to reduce manual exposure in high-risk indoor healthcare areas.
+We are **not building only one robot.** We are building a **local medical robotics platform for Bangladesh**, and starting an **AI journey on Bangladesh's own hospital data.**
 
-## Problem
+- **Version 1 (today):** autonomous **UV-C room disinfection** — Ultron UV.
+- **Versions 2–4 (roadmap):** environment & logistics → patient-signal monitoring → clinical decision support.
+- **The bigger goal:** local **manufacturing, software, and service jobs**, plus a **made-in-Bangladesh AI** that learns from local hospital conditions — not a copied foreign model.
+- **The dream stage:** **BEAR Summit 2026 → CES 2027.**
 
-Hospitals and clinics need frequent, repeatable disinfection of corridors, isolation zones, emergency areas, and patient-contact routes. Manual chemical disinfection is labor-intensive and can repeatedly expose cleaning staff and healthcare workers to contaminated environments.
+> [!CAUTION]
+> Ultron UV is a **research prototype**, not a certified medical device. UV-C can injure eyes and skin. No clinical-efficacy, sterility, or safety claim is made until independent testing and hospital pilots are complete. [Read the safety notice →](docs/SAFETY_AND_LIMITATIONS.md)
 
-This matters especially in resource-constrained settings where imported disinfection robots are expensive, maintenance support is limited, and infection-control teams are under pressure during outbreaks.
+---
 
-## Proposed Solution
+## Our Long-Term Goal
 
-Ultron UV is being developed as a locally maintainable autonomous platform that can:
+Bangladesh has thousands of health facilities, limited healthcare resources, and a serious shortage of nurses. A 2025 Health Sector Reform Commission estimate reported an **82% nursing shortfall**. Imported hospital robots are expensive and hard to maintain locally.
 
-- Map indoor corridor-like environments.
-- Navigate through predefined disinfection routes.
-- Detect obstacles and nearby humans.
-- Disable UV-C output when human presence is detected.
-- Support manual override and supervised operation.
-- Keep the architecture modular so hospitals can service and upgrade the system locally.
+Ultron exists to change that. Our long-term goal is to create:
 
-The project is currently a research and exhibition prototype. It is not a certified medical device and has not completed clinical efficacy validation.
-
-## Project Status
-
-| Capability | Current status | Evidence |
-|---|---|---|
-| UV-C tower hardware | Built as an earlier prototype | Prototype photos |
-| Mobile sensing/navigation platform | Built and under integration | Prototype photos |
-| ROS 2 system architecture | Designed and under development | Architecture diagrams |
-| LiDAR/depth/IMU/encoder integration | Integration stage | Hardware photos and node plan |
-| SLAM/localization/Nav2 workflow | Testing stage | Public test matrix pending |
-| Human-presence safety shutdown | Design stage; validation required | Safety plan |
-| Autonomous UV-C route execution | Planned integration | Roadmap |
-| Hospital pilot and regulatory validation | Not completed | Future milestone |
-
-The repository deliberately separates built, testing, and planned capabilities so visitors, judges, mentors, and investors can evaluate the project honestly.
-
-## Prototype Gallery
-
-| UV-C tower | Autonomous base |
+| Pillar | What it means |
 |---|---|
-| <img src="docs/assets/uv-tower-labeled.jpg" alt="Labeled UV-C tower prototype" width="390"/> | <img src="docs/assets/robot.jpg" alt="Autonomous navigation base" width="430"/> |
-| Early UV-C disinfection hardware with tower, sensors, and control box. | Mobile platform with depth camera, LiDAR, embedded controller, and edge-compute hardware. |
+| 🏭 **Local manufacturing** | A robot that can be built and assembled in Bangladesh, not just imported |
+| 💻 **Software jobs** | ROS 2 autonomy, cloud dashboards, data engineering, and eventually AI/ML |
+| 🔧 **Service jobs** | Local technicians, spare-parts supply, and maintenance contracts |
+| 🏥 **Practical hospital technology** | Affordable, serviceable, designed for narrow corridors and limited infrastructure |
+| 🧠 **Bangladesh's own AI** | An AI built slowly on **our own hospital data**, for our own conditions |
 
-| Two-platform direction | Architecture overview |
-|---|---|
-| <img src="docs/assets/dual-prototype-platforms.jpg" alt="Two Ultron UV prototype platforms" width="430"/> | <img src="docs/assets/two-layer-architecture.jpg" alt="Two-layer architecture" width="430"/> |
-| UV-C hardware and autonomous sensing platform shown together. | Edge and remote compute split for practical ROS 2 development. |
+We start with small pilots, prove safety and value, then scale step by step.
 
-## Target Workflow
+---
+
+## The Four Robot Versions
+
+The robot platform is designed to grow. Version 1 is what we exhibit today; the later versions are the roadmap.
 
 ```mermaid
 flowchart LR
-    A[Hospital corridor or isolation zone] --> B[Map and route planning]
-    B --> C[Human and obstacle checks]
+    V1["<b>V1 · Ultron UV</b><br/>UVC room disinfection<br/><i>(today)</i>"]:::now --> V2["<b>V2</b><br/>Environment +<br/>logistics"]:::next
+    V2 --> V3["<b>V3</b><br/>Patient-signal<br/>monitoring"]:::next
+    V3 --> V4["<b>V4</b><br/>Clinical decision<br/>support + AI"]:::future
+    classDef now fill:#0B5CAD,color:#fff,stroke:#0B5CAD;
+    classDef next fill:#E3F2FD,color:#0B5CAD,stroke:#0B5CAD;
+    classDef future fill:#E8F5E9,color:#2E7D32,stroke:#2E7D32;
+```
+
+| Version | Capability | Status |
+|---|---|---|
+| **V1 — Ultron UV** | UVC-assisted room disinfection after manual cleaning | 🟠 Research prototype — exhibited at BEAR Summit 2026 |
+| **V2** | Environment monitoring (CO₂, humidity, occupancy) + carrying selected supplies | 🗓️ Roadmap |
+| **V3** | Monitor approved patient signals (fever, SpO₂, falls) and alert staff | 🗓️ Roadmap |
+| **V4** | Clinical decision support + controlled medicine delivery, powered by the AI layer | 🗓️ Roadmap |
+
+> The robot will **assist** healthcare workers. It will **not** replace doctors or nurses.
+
+---
+
+## The AI Layer — Bangladesh's Own Hospital Data
+
+This is the part of the vision that goes beyond a lamp on wheels. Ultron follows the **same pattern every major AI company uses** — collect data → find patterns → make predictions — but trained on **Bangladeshi hospital realities**.
+
+```mermaid
+flowchart TD
+    A["<b>V1 · Disinfection data</b><br/>'UV reduced pathogens 340 → 10/cm³'"] --> DB[(Hospital<br/>database)]
+    B["<b>V2 · Environment + logistics</b><br/>'High CO₂ + high occupancy = risk'"] --> DB
+    C["<b>V3 · Patient signals</b><br/>fever, SpO₂, falls"] --> DB
+    DB --> P["<b>V4 · AI prediction</b><br/>'87% outbreak risk in 48h → order antibiotics, raise UV'"]
+    P -.->|learn from outcome| DB
+```
+
+| | Tesla (autonomous driving) | Ultron (hospital infection) |
+|---|---|---|
+| Collects | Camera + radar + lidar | Environment + patient + disinfection data |
+| Learns | "this road pattern → pedestrian → brake" | "this pattern → infection outbreak → isolate + treat" |
+| Predicts | Brakes before the human sees | Acts before the outbreak spreads |
+
+**Same principle. Different domain. Built for Bangladesh, on Bangladesh's data.**
+
+➡️ **Full plain-language explanation:** [docs/AI_ARCHITECTURE.md](docs/AI_ARCHITECTURE.md)
+
+---
+
+## Live Demos
+
+We have built working, interactive web interfaces for both sides of the system.
+
+| Admin command & data dashboard | Robot operator dashboard |
+|---|---|
+| [![Admin dashboard](https://img.shields.io/badge/OPEN-Admin%20Command%20Centre-FF6F00)](https://supersonic654e-byte.github.io/Ultron-WebApp-Admin-dashboard/#/home) | <img src="docs/assets/dashboards/user-dashboard.png" alt="Robot operator dashboard" width="360"/> |
+| A live demo of the hospital-side operations platform: fleet status, disinfection logs, and the data-collection surface that feeds the AI layer. | The operator interface for driving and supervising the robot, viewing live telemetry, and running a disinfection cycle. |
+
+🎬 **See it move:** [Watch the Ultron UV project video on YouTube →](https://youtu.be/kQccZabbFyI)
+
+---
+
+## Project Status
+
+The repository deliberately separates **built**, **testing**, and **planned** capabilities so visitors, judges, mentors, and investors can evaluate the project honestly.
+
+| Capability | Current status | Evidence |
+|---|---|---|
+| Version-2 autonomous base (depth + LiDAR + embedded control) | **Built**, under integration | [Gallery photos](#prototype-gallery) |
+| UV-C payload (modular) | Earlier prototype built; V2 integration planned | Prototype photos |
+| ROS 2 system architecture | Designed and under development | [Architecture docs](docs/ARCHITECTURE.md) |
+| Admin data-collection dashboard | **Live demo** | [Open dashboard →](https://supersonic654e-byte.github.io/Ultron-WebApp-Admin-dashboard/#/home) |
+| Operator control dashboard | **UI built** | [Screenshot](docs/assets/dashboards/user-dashboard.png) |
+| SLAM / Nav2 autonomous route execution | Testing stage; public test matrix pending | [Test matrix](docs/TESTING.md) |
+| Human-presence safety shutdown | Design stage; validation required | [Safety docs](docs/SAFETY_AND_LIMITATIONS.md) |
+| AI prediction layer | **Roadmap** — data collection begins with V1 | [AI architecture](docs/AI_ARCHITECTURE.md) |
+| Hospital pilot & regulatory validation | Not completed | Future milestone |
+
+---
+
+## Prototype Gallery
+
+<table>
+  <tr>
+    <td width="33%" align="center"><b>Front-right</b><br/><img src="docs/assets/gallery/robot-v2-front-right.jpeg" alt="Ultron UV V2 front-right" width="280"/></td>
+    <td width="33%" align="center"><b>Front</b><br/><img src="docs/assets/gallery/robot-v2-front.jpeg" alt="Ultron UV V2 front" width="280"/></td>
+    <td width="33%" align="center"><b>Side</b><br/><img src="docs/assets/gallery/robot-v2-side.jpeg" alt="Ultron UV V2 side" width="280"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Sensor detail</b><br/><img src="docs/assets/gallery/robot-v2-detail-sensors.jpeg" alt="Ultron UV V2 sensor detail" width="280"/></td>
+    <td align="center"><b>Rear</b><br/><img src="docs/assets/gallery/robot-v2-rear.jpeg" alt="Ultron UV V2 rear" width="280"/></td>
+    <td align="center"><b>Top-down</b><br/><img src="docs/assets/gallery/robot-v2-topdown.jpeg" alt="Ultron UV V2 top-down" width="280"/></td>
+  </tr>
+</table>
+
+<details>
+<summary><b>Earlier prototype platforms & architecture diagrams</b></summary>
+
+| | |
+|---|---|
+| <img src="docs/assets/uv-tower-labeled.jpg" alt="Labeled UV-C tower prototype" width="360"/> | <img src="docs/assets/robot.jpg" alt="Earlier autonomous base" width="360"/> |
+| Early UV-C tower hardware with sensors and control box. | Earlier mobile navigation base. |
+| <img src="docs/assets/dual-prototype-platforms.jpg" alt="Two prototype platforms" width="360"/> | <img src="docs/assets/two-layer-architecture.jpg" alt="Two-layer architecture" width="360"/> |
+| UV-C hardware and autonomous sensing platform together. | Edge vs. remote compute split. |
+| <img src="docs/assets/ros2-node-communication.png" alt="ROS 2 node communication" width="360"/> | <img src="docs/assets/five-layer-architecture.jpg" alt="Five-layer architecture" width="360"/> |
+| ROS 2 node communication. | Five-layer system overview. |
+
+</details>
+
+---
+
+## Target Workflow (Version 1)
+
+```mermaid
+flowchart LR
+    A[Empty room after manual cleaning] --> B[Map & route planning]
+    B --> C[Human & obstacle checks]
     C --> D{Area clear?}
-    D -- No --> E[Stop, wait, alert, or re-plan]
-    D -- Yes --> F[Supervised UV-C disinfection cycle]
-    F --> G[Safety monitoring during operation]
+    D -- No --> E[Stop · wait · alert · re-plan]
+    D -- Yes --> F[Supervised UV-C cycle]
+    F --> G[Safety monitoring]
     G --> H{Human detected?}
-    H -- Yes --> I[UV-C off and robot stop]
-    H -- No --> J[Log cycle and return]
+    H -- Yes --> I[UV-C off · robot stop]
+    H -- No --> J[Log cycle & return]
 ```
 
 ## Technology Stack
@@ -91,56 +188,107 @@ flowchart LR
 | Robotics middleware | ROS 2 Humble |
 | Navigation | Nav2, SLAM Toolbox, RViz2 |
 | State estimation | `robot_localization` EKF |
-| Edge compute | NVIDIA Jetson Nano |
+| Edge compute | NVIDIA Jetson class |
 | Embedded control | Arduino Mega 2560 |
 | Sensors | RPLidar, depth camera, MPU6050 IMU, wheel encoders |
 | Communication | Zenoh-based ROS 2 routing over private transport |
+| Operator & admin UIs | Web dashboards (live demo) |
 | Languages | Python, C/C++, Bash, YAML |
+
+---
 
 ## Safety Notice
 
 > [!CAUTION]
-> UV-C radiation can injure eyes and skin. Ultron UV must not be operated with UV-C lamps energized in occupied environments unless qualified safety controls, interlocks, supervision, and institutional approval are in place.
+> UV-C radiation can injure eyes and skin. Ultron UV must **not** be operated with UV-C lamps energized in occupied environments unless qualified safety controls, interlocks, supervision, and institutional approval are in place.
 
-This repository makes no claim of clinical efficacy, sterilization performance, regulatory approval, or production readiness. Public documentation avoids publishing private credentials, real deployment maps, restricted calibration values, and safety-critical implementation details.
+Safety is **layered** and must be **tested** — it can never be called "100% safe":
+person detection · warning lights & sound · emergency stop · restricted-room operation · automatic lamp shutdown.
 
-## Exhibition Materials
+➡️ [Safety and limitations →](docs/SAFETY_AND_LIMITATIONS.md)
 
-- [30-second pitch and booth FAQ](docs/EXHIBITION_PLAYBOOK.md)
-- [CES 2027 and funding strategy](docs/CES_AND_FUNDING_STRATEGY.md)
-- [Public architecture](docs/ARCHITECTURE.md)
-- [Safety and limitations](docs/SAFETY_AND_LIMITATIONS.md)
-- [Testing matrix](docs/TESTING.md)
+---
 
-## Roadmap
+## Business Model & Roadmap
+
+**A realistic revenue path — built in phases, not promises.**
+
+| Phase | Goal |
+|---|---|
+| **Phase 1** | Validation in **3–5 hospitals** |
+| **Phase 2** | **20–30** paid or subsidized deployments + maintenance & dashboard services |
+| **Phase 3** | Larger national sales, then regional export — **after** safety, quality, and regulatory requirements are met |
+
+Revenue can come from robot sales, annual maintenance, cloud services, upgrades, and future modules.
+
+> Our current **cost target** is **Tk 146,000** for the base robot + **Tk 42,000** for the UVC module (**Tk 188,000** total). This is a *target based on the present design*, not a final certified selling price.
 
 | Period | Milestone |
 |---|---|
-| 2026 | Complete BEAR Summit prototype demonstration, publish public-safe test evidence, and refine safety architecture |
-| 2027-2028 | Controlled hospital-like pilot testing, UV-C safety validation, workflow studies, and prototype cost optimization |
-| 2029-2031 | Multi-ward deployment research, fleet coordination, maintenance model, and commercialization preparation |
-| 2032-2036 | Regional infection-control robotics platform with analytics, service partnerships, and export potential |
+| 2026 | BEAR Summit prototype demonstration; publish public-safe test evidence; refine safety architecture |
+| 2027 | Target: **CES 2027** global showcase; controlled hospital-like pilot testing; UV-C safety validation |
+| 2028–2031 | Multi-ward deployment research, fleet coordination, maintenance model, commercialization prep |
+| 2032+ | Regional infection-control robotics platform with analytics, service partnerships, and export |
+
+➡️ [CES 2027 & funding strategy →](docs/CES_AND_FUNDING_STRATEGY.md)
+
+---
+
+## Why Ultron Is Different (Bangladesh Focus)
+
+Many imported hospital robots are **expensive and difficult to maintain locally**. Ultron's advantage is **not only** lower target cost. It is being designed for:
+
+- 🏥 **Narrow corridors** and limited infrastructure
+- 🔩 **Local spare parts** and **local technicians**
+- 👩‍⚕️ **Bangladeshi hospital workflows**
+- 📈 An industry that is **early-stage** — we don't claim "zero competition"; we claim we're helping **build** the sector.
+
+---
+
+## Documentation
+
+| Document | What's inside |
+|---|---|
+| 🧠 [AI Architecture](docs/AI_ARCHITECTURE.md) | How Ultron builds Bangladesh's own AI on hospital data |
+| 🖥️ [Live Demos](docs/LIVE_DEMOS.md) | Admin & operator dashboards, and how they connect |
+| 🏗️ [System Architecture](docs/ARCHITECTURE.md) | Public-safe edge/remote compute split, ROS 2 nodes |
+| 🛟 [Safety & Limitations](docs/SAFETY_AND_LIMITATIONS.md) | UV-C + mobile-robot safety, honest known limitations |
+| 🧪 [Test Matrix](docs/TESTING.md) | What will be measured before any performance claim |
+| 🎤 [Exhibition Playbook](docs/EXHIBITION_PLAYBOOK.md) | 30-sec pitch, booth FAQ, judge Q&A |
+| 🚀 [CES 2027 & Funding Strategy](docs/CES_AND_FUNDING_STRATEGY.md) | Readiness gaps, funding path, 90-day plan |
+| 📦 [Installation](docs/INSTALLATION.md) | Public setup workflow & secret management |
+| 🔁 [Development Process](docs/DEVELOPMENT_PROCESS.md) | How the project was built |
+| 📰 [Publication Matrix](docs/PUBLICATION_MATRIX.md) | What's safe to publish vs. kept private |
+| 📋 [Publishing Checklist](docs/PUBLISHING_CHECKLIST.md) | Privacy & security checklist |
+| 📄 [Project speech (9-point)](https://github.com/supersonic654e-byte/Ultron-UV-/tree/redesign/bear-summit-2026-update#readme) | The BEAR Summit pitch this repo supports |
+
+---
 
 ## Current Ask
 
 We are looking for:
 
-- Healthcare mentors for infection-control workflow review.
-- Robotics mentors for navigation, safety, and reliability testing.
-- UV-C/electrical safety reviewers for safe validation planning.
-- Hospital or lab partners for controlled non-clinical pilot environments.
-- Startup and grant advisors for productization, costing, and regulatory strategy.
-
-## Team
-
-**Team Ultron UV**  
-Primary institution: **University of Asia Pacific**  
-Contact: use GitHub Issues for public questions.
+- 🏥 Healthcare mentors for infection-control workflow review
+- 🤖 Robotics mentors for navigation, safety, and reliability testing
+- ☢️ UV-C / electrical safety reviewers for safe validation planning
+- 🧪 Hospital or lab partners for **controlled non-clinical pilot** environments
+- 💼 Startup & grant advisors for productization, costing, and regulatory strategy
 
 ---
 
+## Team
+
+**Team Ultron UV**
+Primary institution: **University of Asia Pacific**
+Contact: use **GitHub Issues** for public questions.
+
 <div align="center">
 
-**Built in Bangladesh. Designed for safer healthcare environments.**
+---
+
+### BEAR Summit 2026 → CES 2027
+
+**Built in Bangladesh. Designed for Bangladeshi healthcare.**
+*Not a copied model — a platform we are building, step by step, on our own data.*
 
 </div>
