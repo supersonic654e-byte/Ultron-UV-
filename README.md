@@ -61,7 +61,7 @@ The repository deliberately separates built, testing, and planned capabilities s
 
 | UV-C tower | Autonomous base |
 |---|---|
-| <img src="docs/assets/uv-tower-labeled.jpg" alt="Labeled UV-C tower prototype" width="390"/> | <img src="docs/assets/navigation-base-prototype.jpg" alt="Autonomous navigation base" width="430"/> |
+| <img src="docs/assets/uv-tower-labeled.jpg" alt="Labeled UV-C tower prototype" width="390"/> | <img src="docs/assets/robot.jpg" alt="Autonomous navigation base" width="430"/> |
 | Early UV-C disinfection hardware with tower, sensors, and control box. | Mobile platform with depth camera, LiDAR, embedded controller, and edge-compute hardware. |
 
 | Two-platform direction | Architecture overview |
