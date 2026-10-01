@@ -10,6 +10,7 @@
 [![Status](https://img.shields.io/badge/status-research%20prototype-orange)](#project-status)
 [![Medical Use](https://img.shields.io/badge/medical%20use-not%20validated-critical)](#safety-notice)
 [![BEAR Summit](https://img.shields.io/badge/BEAR%20Summit-2026-0B5CAD)](https://bear-summit-2026.vercel.app/)
+[![Watch Video](https://img.shields.io/badge/%E2%96%B6%20Watch-Project%20Video-red?logo=youtube)](https://www.youtube.com/watch?v=kQccZabbFyI)
 [![License](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey)](LICENSE_NOTICE.md)
 
 <img src="docs/assets/dual-prototype-platforms.jpg" alt="Ultron UV prototype platforms" width="900" />
@@ -26,6 +27,7 @@
 - [Problem](#problem)
 - [Proposed Solution](#proposed-solution)
 - [Project Status](#project-status)
+- [Project Video](#project-video)
 - [Prototype Gallery](#prototype-gallery)
 - [Target Workflow](#target-workflow)
 - [Technology Stack](#technology-stack)
@@ -76,6 +78,14 @@ The project is currently a research and exhibition prototype. It is not a certif
 | Hospital pilot and regulatory validation | Not completed | Future milestone |
 
 The repository deliberately separates built, testing, and planned capabilities so visitors, judges, mentors, and investors can evaluate the project honestly.
+
+## Project Video
+
+[![Ultron UV — project video](https://img.youtube.com/vi/kQccZabbFyI/maxresdefault.jpg)](https://www.youtube.com/watch?v=kQccZabbFyI)
+
+**[▶ Watch the Ultron UV project video](https://www.youtube.com/watch?v=kQccZabbFyI)** — autonomous navigation, sensor integration, and UV-C platform walkthrough.
+
+> Filmed by Team Supersonic UAP. See the [Exhibition Playbook](docs/EXHIBITION_PLAYBOOK.md) for the pitch that accompanies this demo.
 
 ## Prototype Gallery
 
