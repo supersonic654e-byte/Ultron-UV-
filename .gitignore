@@ -1,0 +1,33 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Private runtime configuration
+zenoh/
+calibration/
+maps/
+credentials/
+deployment/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# ROS 2 / build artifacts
+build/
+install/
+log/
+*.bag
+*.db3
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
